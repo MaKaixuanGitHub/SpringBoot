@@ -1,0 +1,27 @@
+# User Information
+springboot:
+  user:
+    userName: makaixuan
+    passWord: 123456
+    age: 28
+##########################################################################################
+## Oracle 配置
+##########################################################################################
+oracleDS:
+  platform: oracle
+  url: jdbc:oracle:thin:LMUSR/LMSTAFF@192.168.1.225:1521/LMBATCH01
+  username: LMUSR
+  password: LMSTAFF
+  driverClassName: oracle.jdbc.driver.OracleDriver
+  max-active: 10
+  max-idle: 5
+  min-idle: 2
+  initial-size: 6
+  validation-query: select 1 from dual
+  test-while-idle: true
+##########################################################################################
+## Mybatis 配置
+##########################################################################################
+mybatis
+  typeAliasesPackage: org.spring.springboot.domain
+  mapperLocations: classpath:mapper/*.xml
